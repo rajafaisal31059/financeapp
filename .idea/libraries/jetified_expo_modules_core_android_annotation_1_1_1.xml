@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jetified-expo-modules-core$android-annotation-1.1.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/node_modules/expo-modules-core/android-annotation/build/.transforms/231263cf4a9baffece3c4c82002e6f97/transformed/jetified-expo-modules-core$android-annotation-1.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

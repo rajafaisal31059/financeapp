@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="expo-modules-core$android-annotation-1.1.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/node_modules/expo-modules-core/android-annotation/build/libs/expo-modules-core$android-annotation-1.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

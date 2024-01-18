@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="assets">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/android/app/build/intermediates/compressed_assets/debug/out/assets/Inter-Medium.otf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/app/build/intermediates/compressed_assets/debug/out/assets/EXDevMenuApp.android.js.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/app/build/intermediates/compressed_assets/debug/out/assets/Inter-ExtraLight.otf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/app/build/intermediates/compressed_assets/debug/out/assets/dev-menu-packager-host.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/app/build/intermediates/compressed_assets/debug/out/assets/app.config.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/app/build/intermediates/compressed_assets/debug/out/assets/Inter-SemiBold.otf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/app/build/intermediates/compressed_assets/debug/out/assets/Inter-Bold.otf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/app/build/intermediates/compressed_assets/debug/out/assets/Inter-Light.otf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/app/build/intermediates/compressed_assets/debug/out/assets/Inter-ExtraBold.otf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/app/build/intermediates/compressed_assets/debug/out/assets/Inter-Black.otf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/app/build/intermediates/compressed_assets/debug/out/assets/Inter-Regular.otf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/app/build/intermediates/compressed_assets/debug/out/assets/Inter-Thin.otf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/app/build/intermediates/compressed_assets/debug/out/assets/expo_dev_launcher_android.bundle.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

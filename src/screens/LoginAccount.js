@@ -90,7 +90,7 @@ const LoginAccount = ({ navigation }) => {
         />
         <CustomButton
           // onPress={loginUser}
-          onPress={{}}
+          onPress={()=>{ navigation.navigate('Menu')}}
           title="Sign In"
           height={60}
           width={320}

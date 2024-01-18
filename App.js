@@ -6,6 +6,11 @@ import HomeScreen from "./src/screens/HomeScreen";
 import Register from "./src/screens/Register";
 import LoginAccount from "./src/screens/LoginAccount";
 import HomeMenu from "./src/screens/HomeMenu";
+import Product from "./src/screens/Product";
+import Transaction from "./src/screens/Transaction";
+import Account from "./src/screens/Account";
+import BottomTabNavigator from "./src/navigation/BottomNavigator";
+
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -30,9 +35,24 @@ export default function App() {
           />
            <Stack.Screen
             name="Menu"
-            component={HomeMenu}
+            component={BottomTabNavigator}
             options={{ headerShown: false }}
           />
+          <Stack.Screen
+        name="Profile"
+        component={BottomTabNavigator}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Product"
+        component={BottomTabNavigator}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Transaction"
+        component={BottomTabNavigator}
+        options={{headerShown: false}}
+      />
         
         </Stack.Navigator>
       </NavigationContainer>

@@ -8,64 +8,19 @@ import {
   TouchableOpacity,
   TextInput,
 } from 'react-native';
-// import auth from '@firebase/auth'
-// import { getFirestore } from '@firebase/firestore';
-// import { firebase } from '@react-native-firebase/auth';
-// import auth from '@react-native-firebase/auth';
-// import firestore from '@react-native-firebase/firestore';
-// import bcrypt from 'react-native-bcrypt';
+import { auth } from '../../firebase';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 
 const Register = ({navigation}) => {
 
-//   const createUser = async () => {
-//     try {
-//       const authResult = await auth().createUserWithEmailAndPassword(
-//         email.trim(),
-//         password,
-//       );
-      
-//       const hashedPassword = bcrypt.hashSync(password, 10);
+const handleSignup = async () => {
+  await createUserWithEmailAndPassword(auth,email.trim(),password).then((userCredential)=>{
+    const user = userCredential.user;
+    console.log(user);
+  })
 
-//       await firestore().collection('users').doc(authResult.user.uid).set({
-//         name: name,
-//         email: email.trim(),
-//         password: hashedPassword,
-//         UserID: authResult.user.uid,
-//       });
-
-      
-
-//       firestore().collection('user')
-
-
-//       setMessage('Account Created.');
-//       setEmail('');
-//       setPassword('');
-
-//       setTimeout(() => {
-//         setMessage('');
-//         navigation.navigate('login');
-//       },1000);
-//     } catch (error) {
-//       if (error.code === 'auth/email-already-in-use') {
-//         setMessage('That email address is already in use!');
-//         setTimeout(() => {
-//           setMessage('');
-//         }, 3000);
-//       }
-
-//       if (error.code === 'auth/invalid-email') {
-//         setMessage('That email address is invalid!');
-
-//         setTimeout(() => {
-//           setMessage('');
-//         }, 3000);
-//       }
-
-//       console.error(error);
-//     }
-//   };
+}
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -100,8 +55,8 @@ const Register = ({navigation}) => {
           secureTextEntry={true}
         />
         <CustomButton
-        //   onPress={createUser}
-          onPress={()=>{}}
+          onPress={handleSignup}
+         
           title="Register "
           height={60}
           width={320}

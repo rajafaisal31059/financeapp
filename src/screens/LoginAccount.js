@@ -9,65 +9,33 @@ import {
   TouchableOpacity,
   TextInput,
 } from 'react-native';
+import { auth } from '../../firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
-// import auth from '@react-native-firebase/auth';
-// import firestore from '@react-native-firebase/firestore';
-// import { setUser } from '../redux/userslice';
-// import { useDispatch } from 'react-redux';
 
 
 const LoginAccount = ({ navigation }) => {
   
-  // const dispatch=useDispatch()
+  const handleLogin = async () => {
+    await signInWithEmailAndPassword(auth,email.trim(),password).then((userCredential)=>{
+      const user = userCredential.user;
+      setMessage('Sign-In Successful');
+      console.log(user);
+      setTimeout(() => {
+        setMessage('')
+        navigation.navigate('Menu');
+      },3000);
+      
+    })
+    
+  }
+
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
 
-  // useEffect(() => {
-  //   const unsubscribe = auth().onAuthStateChanged(  (user) => {
-  //     if (user) {
-     
-  //       navigation.navigate('Menu');
-  //     }
-  //   });
-
-  //   return () => unsubscribe();
-  // }, [navigation]);
-
-  // const loginUser = async () => {
-  //   try {
-      
-  //     const userCredential = await auth().signInWithEmailAndPassword(
-  //       email.trim(),
-  //       password,
-  //     );
-  //     const { user } = userCredential;
-      
-  //     setEmail('');
-  //     setPassword('');
-  //     setMessage('Sign-In Successful');
-
-  //     setTimeout(() => {
-  //       setMessage('');
-  //       navigation.navigate('Menu');
-  //     }, 3000);
-  //   } catch (error) {
-  //     if (error.code === 'auth/user-not-found') {
-  //       setMessage('No user found with this email address!');
-  //     } else if (error.code === 'auth/wrong-password') {
-  //       setMessage('Incorrect Password Entered!');
-  //     } else {
-  //       setMessage('Error during sign-in');
-  //     }
-
-  //     setTimeout(() => {
-  //       setMessage('');
-  //     }, 3000);
-
-  //     console.error(error);
-  //   }
-  // };
-
+  
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
@@ -89,8 +57,7 @@ const LoginAccount = ({ navigation }) => {
           secureTextEntry={true}
         />
         <CustomButton
-          // onPress={loginUser}
-          onPress={()=>{ navigation.navigate('Menu')}}
+          onPress={handleLogin}
           title="Sign In"
           height={60}
           width={320}

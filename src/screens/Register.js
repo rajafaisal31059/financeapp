@@ -17,10 +17,19 @@ const Register = ({navigation}) => {
 const handleSignup = async () => {
   await createUserWithEmailAndPassword(auth,email.trim(),password).then((userCredential)=>{
     const user = userCredential.user;
+    setMessage('Sign Up Successful');
     console.log(user);
+    setTimeout(() => {
+      setMessage('')
+      navigation.navigate('login');
+    },1000);
+    
   })
-
+  
 }
+
+
+
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

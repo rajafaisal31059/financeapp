@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { auth } from '../../firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { Firestore } from '@firebase/firestore';
 
 
 const Register = ({navigation}) => {
@@ -24,7 +25,9 @@ const handleSignup = async () => {
       navigation.navigate('login');
     },1000);
     
-  })
+  }
+  
+  )
   
 }
 

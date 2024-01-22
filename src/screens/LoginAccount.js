@@ -15,6 +15,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 
 
 const LoginAccount = ({ navigation }) => {
+
   
   const handleLogin = async () => {
     await signInWithEmailAndPassword(auth,email.trim(),password).then((userCredential)=>{
@@ -26,7 +27,11 @@ const LoginAccount = ({ navigation }) => {
         navigation.navigate('Menu');
       },3000);
       
-    })
+    }
+    
+    
+    
+    )
     
   }
 

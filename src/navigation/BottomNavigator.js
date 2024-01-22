@@ -3,8 +3,8 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/HomeScreen';
 import HomeMenu from '../screens/HomeMenu';
 import Icon from 'react-native-vector-icons/Ionicons'; // Import your icon library
-import Account from '../screens/Account';
-import Product from '../screens/Product';
+import {Account} from '../screens/Account';
+import {Product} from '../screens/Product';
 import Transaction from '../screens/Transaction';
 import {NavigationContainer} from '@react-navigation/native';
 const Tab = createBottomTabNavigator();
